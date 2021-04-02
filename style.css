@@ -1,0 +1,52 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  background: #fadadd;
+  margin-left: 10vw;
+}
+
+.book {
+  display: inline-block;
+  width: 250px;
+  height: 320px;
+  background-size: cover;
+  margin: 10px;
+  border-radius: 6px;
+  vertical-align: top;
+  position: relative;
+filter: opacity(0.5);
+
+}
+
+.book:hover{
+  cursor: pointer;
+   filter: none; 
+}
+
+.book__label {
+  font-family: 'PT Sans', sans-serif;
+  position: absolute;
+  top: 0;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  opacity: 0;
+}
+
+.book__label:hover{
+  opacity: 1;}
+
+h1{
+  font-size: 50px;
+  font-family: 'Shrikhand', cursive;
+  color: red;
+    -webkit-text-stroke: 1px white;
+}
+
+.description {
+    font-family: 'PT Sans', sans-serif;
+  position: absolute;
+  top: 0;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
