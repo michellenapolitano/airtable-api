@@ -31,26 +31,25 @@ base('books').select({
     var book = document.createElement('div');
     var label = document.createElement('div');
     var coverImageUrl = record.fields.cover_image[0].url;
+    var description = document.createElement('div');
+      
 
     label.classList.add('book__label');
+    description.classList.add('description');
     label.innerHTML = record.fields.title;
+    description.innerHTML = record.fields.description;
 
     book.classList.add('book');
     book.style.backgroundImage = 'url(' + coverImageUrl + ')';
 
     // Append the new content to your document
     book.append(label);
+    book.append(description);
     bookContainer.append(book);
+
+
   });
 
-    records.forEach(function(record) {
-    console.log('Retrieved', record.get('description'), record.fields);
-    var description = document.createElement('div');
-        label.classList.add('description');
-        book.classList.add('description');
-        label.innerHTML = record.fields.title;
-        book.append(description);
-    bookContainer.append(description);  });
   // To fetch the next page of records, call `fetchNextPage`.
   // If there are more records, `page` will get called again.
   // If there are no more records, `done` will get called.
